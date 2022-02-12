@@ -4,8 +4,19 @@ import styles from '../styles/Home.module.css'
 import Container from '../components/Container'
 import InlineLink from '../components/InlineLink'
 import classNames from 'classnames'
+import { useState } from 'react'
+
+const TIKTOK_EASTER_EGG_DISPLAY_THRESHOLD = 5
 
 const Home: NextPage = () => {
+  const [timesHoveredOverTikTok, setTimesHoveredOverTikTok] = useState(0)
+  const onMouseEnterTikTok = () => {
+    if (timesHoveredOverTikTok >= TIKTOK_EASTER_EGG_DISPLAY_THRESHOLD) return
+    console.log('Mouse entered')
+
+    setTimesHoveredOverTikTok((count) => count + 1)
+  }
+
   return (
     <Container className="pt-6">
       <Head>
@@ -62,7 +73,7 @@ const Home: NextPage = () => {
             Twitter 🚧
           </InlineLink>
         </li>
-        <li>
+        <li onMouseEnter={onMouseEnterTikTok}>
           <InlineLink
             href="#"
             className={classNames(
@@ -70,6 +81,9 @@ const Home: NextPage = () => {
               styles.tiktok
             )}>
             TikTok 🚧
+            {timesHoveredOverTikTok >= TIKTOK_EASTER_EGG_DISPLAY_THRESHOLD && (
+              <span className="text-gray-500"> (neat stuff right? I know 😉)</span>
+            )}
           </InlineLink>
         </li>
       </ul>
