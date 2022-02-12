@@ -15,7 +15,6 @@ const Home: NextPage = () => {
   const [timesHoveredOverTikTok, setTimesHoveredOverTikTok] = useState(0)
   const onMouseEnterTikTok = () => {
     if (timesHoveredOverTikTok >= TIKTOK_EASTER_EGG_DISPLAY_THRESHOLD) return
-    console.log('Mouse entered')
 
     setTimesHoveredOverTikTok((count) => count + 1)
   }
