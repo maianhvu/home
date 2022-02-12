@@ -9,7 +9,7 @@ const Container = (props: PropsWithChildren<Props>) => {
   return (
     <div
       {...divProps}
-      className={classNames('w-full max-w-xl mx-auto py-4 px-6 lg:px-0', className)}
+      className={classNames('w-full max-w-2xl mx-auto py-4 px-6 lg:px-0', className)}
     />
   )
 }
