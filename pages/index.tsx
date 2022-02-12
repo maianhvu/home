@@ -54,7 +54,7 @@ const Home: NextPage = () => {
           <InlineLink
             href="https://www.linkedin.com/in/anhvumai/"
             className="hover:border-b-blue-500 text-blue-500">
-            Linked<span className="text-white dark:text-gray-400">In</span>
+            Linked<span className="text-gray-800 dark:text-gray-400">in</span>
           </InlineLink>
         </li>
         <li>
