@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       <h1 className="text-2xl mb-4 text-black dark:text-white">Hi 👋 my name is Vũ.</h1>
 
-      <p>📍 I&apos;m a {age}-year old Software Engineer based in Singapore 🇸🇬.</p>
+      <p>📍 I&apos;m a {age}-year-old Software Engineer based in Singapore 🇸🇬.</p>
       <p>
         💼 I&apos;m currently working as a Senior Mobile Engineer for{' '}
         <InlineLink
